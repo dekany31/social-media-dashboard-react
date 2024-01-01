@@ -1,0 +1,52 @@
+* {
+  /* border: 2px dotted red; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  background: linear-gradient(hsl(232, 19%, 15%) 0%, hsl(232, 19%, 15%) 27%,
+      hsl(230, 17%, 14%) 27%, hsl(230, 17%, 14%) 100%);
+}
+
+.socialHeader {
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+  background-color: hsl(232, 19%, 15%);
+  color: hsl(228, 34%, 66%);
+}
+
+.socialH {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+}
+
+.switch {
+  width: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.platforms {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 0 15vw;
+}
