@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 
-function ToggleSwitch() {
-
-  // const changeTheme = function () {
-
-  // };
-
+function ToggleSwitch({ onChange, checked }) {
+  // a parameterek a funkcionalitast valtoztatjak onchange lefut, checked true vagy false
   const SpanStyles = styled.div`
   .toggle {
-  background: linear-gradient(to right, #2196F3, hsl(163, 72%, 41%));
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   width: 45px;
-  height: 20px;
+  height: 22px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -18,7 +14,7 @@ function ToggleSwitch() {
 .toggle-active {
   background-color: #2196F3;
   width: 45px;
-  height: 20px;
+  height: 22px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -32,7 +28,7 @@ input {
   width: 17px;
   background-color:hsl(232, 19%, 15%);
   border-radius: 12px;
-  margin: 1.5px;
+  margin: 2.5px;
 }
 input:checked + .toggle {
   background-color: #2196F3;
@@ -44,7 +40,7 @@ input:checked + .toggle > .slider {
 
   return (
     <SpanStyles>
-      <input type="checkbox" id="example" />
+      <input type="checkbox" id="example" onChange={onChange} checked={checked} />
       <label for="example" class="toggle">
         <div class="slider"></div>
       </label>

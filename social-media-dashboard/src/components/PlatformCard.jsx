@@ -106,7 +106,6 @@ h6 {
     /*  */
 `
 
-
 const PlatformCard = (platform, name, followers, difference) =>
   <CardStyles>
     <div className={"cardHeadBand cardHeadBand-" + platform} />
@@ -116,8 +115,10 @@ const PlatformCard = (platform, name, followers, difference) =>
         <h4>@{name}</h4>
       </div>
       <h2>{Math.abs(followers) > 9999 ? Intl.NumberFormat('en', { notation: 'compact' }).format(followers) : followers}</h2>
+      {/* formazza a nagyobb szamokat 12K-ra */}
       <h6>FOLLOWERS</h6>
       <div className="followersDiff">
+        {/* a nyilacska */}
         {difference > 0 ? <i className="fa fa-caret-up"></i> : <i className="fa fa-caret-down"></i>}
         <h4 className={difference > 0 ? "positive" : "negative"}>{Math.abs(difference)} Today</h4>
       </div>
@@ -127,6 +128,6 @@ const PlatformCard = (platform, name, followers, difference) =>
 const Platforms = () => {
   return [...data.platforms].map(x => Object.entries(x).map(y =>
     PlatformCard(y[0], y[1].name, y[1].followers, y[1].difference)))
-}
+}// Object.entries(x) segítségével az adott platformot reprezentáló objektumot konvertálja egy olyan tömbbé, amely az objektum kulcs-érték párait tartalmazza.
 
 export default Platforms
